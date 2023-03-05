@@ -1,2 +1,8 @@
-# Real_Time_Diagnostic
- Système de diagnostique temps réel des défauts d’une installation solaire 
+# CONTENU
+- ## INTRODUCTION
+- ## PROBLEMATIQUE
+- ## PRESENTATION DE LA MAQUETTE
+- ## LES DIFFERENTES PARTIES
+- ## RESULTATS OBTENUES ET INTERPRETATIONS
+
+## I- INTRODUCTION
