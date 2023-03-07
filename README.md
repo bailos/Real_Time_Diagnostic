@@ -31,5 +31,22 @@ Schema de montage
 
 
 ### 1- INSTRUMENTATION
+#### a- Les capteurs
+- Capteur de temperature DS18B20
+
+Le capteur de temperature DS18B20 nous permet de prelever la temperature en temp reel. Son principe est de communique sur un bus à un fil (onewire) qui, par définition, ne nécessite qu'une seule ligne de données (et une terre) pour communiquer avec un microprocesseur central. Utilisable avec les systèmes 3.0-5.5V. Le câble est gainé de PVC, nous vous suggérons donc de le garder sous 100 degrés max
+- Capteur de luminosite TSL2561 
+
+Le capteur de luminosité TSL2561 est un capteur de lumière numérique avancé, idéal pour une utilisation dans une large gamme de situations lumineuses. Comparé aux cellules CdS à faible coût, ce capteur est plus précis, permettant des calculs de lux exacts et peut être configuré pour différentes plages de gain/temporisation afin de détecter des plages de lumière allant de 0,1 - 40 000+ Lux à la volée. La meilleure partie de ce capteur est qu'il contient à la fois des diodes infrarouges et à spectre complet. Cela signifie que nous pouvons mesurer séparément la lumière infrarouge, à spectre complet ou visible par l'homme. La plupart des capteurs ne peuvent détecter que l'un ou l'autre, ce qui ne représente pas exactement ce que l'œil humain voit (puisque nous ne pouvons pas percevoir la lumière IR détectée par la plupart des photodiodes)
+
+- Capteur de courant ACS712
+
+Ce capteur nous permet de mesuer le courant reel fourni par le module PV.
+Le principe de ce capteur de courant est basé sur un circuit à effet hall ACS724 permettant de mesurer un courant continu de 0 A à 30 A. Une sortie analogique dédiée, proportionnelle au courant mesuré (500 mV pour 0 A sous 5 Vcc) est alors orientée vers un circuit de conversion numérique (nombre de bit) en temps réel.
+
+- Capteur de tension DCO-25V
+
+Gracw a ce capteur nous avons la tension reel fourni par le module.
+Le principe de ce capteur est basé sur un principe de séparation résistif, qui consiste à réduire la tension d'entrée du terminal de l'interface 5 fois ; la tension d'entrée analogique coté Arduino va jusqu'à 5 V ; la tension d'entrée du module de détection ne peut pas être supérieure à 5 V × 5 = 25 V. Nous avons choisi ce module qui est moins efficace que bien d’autre car il est facilement maniable, ce qui facilite nos teste qui ne nécessite pas de grande tension.
 
 
