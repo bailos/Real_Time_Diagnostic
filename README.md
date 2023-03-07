@@ -31,7 +31,7 @@ Schema de montage
 
 
 ### 1- INSTRUMENTATION
-#### a- Les capteurs
+#### Les capteurs
 - Capteur de temperature DS18B20
 
 Le capteur de temperature DS18B20 nous permet de prelever la temperature en temp reel. Son principe est de communique sur un bus à un fil (onewire) qui, par définition, ne nécessite qu'une seule ligne de données (et une terre) pour communiquer avec un microprocesseur central. Utilisable avec les systèmes 3.0-5.5V. Le câble est gainé de PVC, nous vous suggérons donc de le garder sous 100 degrés max
@@ -48,5 +48,19 @@ Le principe de ce capteur de courant est basé sur un circuit à effet hall ACS7
 
 Gracw a ce capteur nous avons la tension reel fourni par le module.
 Le principe de ce capteur est basé sur un principe de séparation résistif, qui consiste à réduire la tension d'entrée du terminal de l'interface 5 fois ; la tension d'entrée analogique coté Arduino va jusqu'à 5 V ; la tension d'entrée du module de détection ne peut pas être supérieure à 5 V × 5 = 25 V. Nous avons choisi ce module qui est moins efficace que bien d’autre car il est facilement maniable, ce qui facilite nos teste qui ne nécessite pas de grande tension.
+####  2- La carte de controle 
+Nous utiliserons de facon generale une carte arduino pour le controle.
+Pour des question de robustesse de performence a production nous utiliserons une version pro de arduino a savoir les board MKR.Mais pour certaine test nous utiliserons le arduino uno.Il deposera des entrees/ sorties neccessaire pour acceuil ou integre deja un module wifi, SD et RTC. Grace a sa facilliter de programmation avec une language assez intuitif l'interfaçage avec d'autres circuits est bien possible. Le microcontrôleur peut être programmé de manière à effectuer des tâches très diverses comme la domotique, le pilotage d'un robot, de l'informatique embarquée, etc… 
+Son logiciel de programmation est une application Java, libre et servant d'éditeur de code et de compilateur, et qui peut transférer le programme au travers de la liaison série (RS-232, Bluetooth ou USB selon le module). Le langage de programmation utilisé est le C++, compilé avec avr-g++ , et lié à la bibliothèque de développement Arduino, permettant l'utilisation de la carte et de ses entrées/sorties. 
+
+#### 3- Module Real time clock RTC
+Le module rtc nous permet faire un horodatage des donnees collecter depuis chaque capteur.Le module I2C basé sur un DS1307 permettant d'ajouter une fonction horloge temps réel à une carte a microcontroleur.
+#### 4- Module SD
+Les carte de controle que nous utilisons ont generalement une faible capacite de stockage, pour mieux stockes ces fichiers de maniere structure et durable nous avons utilise une carte SD, integre a arduine comme carte d7extension.
+Elle permet d’insérer la carte mémoire permettant de stocker les données en local pour un  éventuel traitement ou envoi sur un serveur distant ou cloud .
+## V- CIRCUIT ASSEMBLER
+
+
+
 
 
